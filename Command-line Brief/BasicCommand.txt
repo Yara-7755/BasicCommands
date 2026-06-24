@@ -1,0 +1,10 @@
+cd : change current working directory to another 
+ls : list all directories & files in current directory 
+mkdir : create new folder
+echo : create file with content 
+cat : display the content in file 
+rm : remove directory
+pwd : print path of file 
+rmdir : delete empty file
+cp : copy contant from file to another 
+cd - : back to prev directory 
