@@ -1,0 +1,16 @@
+git init :turn directory into repo
+
+git add . : stage all changes 
+
+git commit -m "....." : save staged snapshot locally
+
+git branch : list all local branches 
+
+git pull : fetch and merge remote updates locally 
+
+git push : upload commits 
+
+git checkout : to switched
+
+git checkout -b : create new branch
+
