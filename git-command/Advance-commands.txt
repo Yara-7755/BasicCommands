@@ -1,0 +1,5 @@
+git commit --amend : Modifies the most recent commit. It adds staged changes or updates the commit 
+git bisect start : nitiates a binary search algorithm to pinpoint exactly which historic commit introduced a bug.
+git stash -p : Allows you to interactively choose specific hunks of code to stash rather than saving the whole file.
+
+git push origin --delete <....> : Directly removes a specified branch from the remote repository
