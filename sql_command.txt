@@ -1,27 +1,30 @@
-SELECT (columnsname) from (tablename)
-SELECT *(all columns) from (tablename)
-INSERT INTO tablename(column name) values ()
-UPDATE tablename set columnname = ".." where (condition)
-DELETE from tablename where (condition)
-CREATE TABLE tablename (columns ,...........)
-USE DATABASE name
-DROP DATABASE databasename
-DROP TABLE tablename
-ALTER TABLE employees
-MODIFY COLUMN Cname datatype ;
-SELECT * FROM tablename
-WHERE Cname LIKE 'A%';  , WHERE Cname BETWEEN (range);  
-ORDER BY Cname ASC/DESC;
-Aggregate Data:
-     COUNT(*)
+DATA RETRIEVAL:
+SELECT (columnname) FROM (tablename)      - Get specific column(s) from a table
+SELECT * FROM (tablename)                 - Get all columns from a table
 
+DATA MANIPULATION (DML):
+INSERT INTO tablename (columnname) VALUES ()          - Add a new row/record to the table
+UPDATE tablename SET columnname = ".." WHERE (condition)  - Modify existing data based on a condition
+DELETE FROM tablename WHERE (condition)               - Remove a row/record based on a condition
 
+DATA DEFINITION (DDL):
+CREATE TABLE tablename (columns, ...)      - Create a new table with its columns
+USE DATABASE name                          - Select which database to work on
+DROP DATABASE databasename                 - Delete the entire database (irreversible)
+DROP TABLE tablename                       - Delete the entire table with all its data
+ALTER TABLE employees MODIFY COLUMN Cname datatype;  - Change the data type of an existing column
 
-     SUM(Cname)
-     AVG(Cname)
-     GROUP BY name;
+FILTERING & SORTING:
+SELECT * FROM tablename WHERE Cname LIKE 'A%';   - Get rows where value starts with a specific letter
+WHERE Cname BETWEEN (range);                      - Get rows where value falls within a range
+ORDER BY Cname ASC/DESC;                          - Sort results ascending (ASC) or descending (DESC)
 
-Constraints :
-     PRIMARY KEY
-     FOREIGN KEY (newnameinthetable) REFERENCES tablename(id)
-     
+AGGREGATE FUNCTIONS:
+COUNT(*)          - Count the number of rows
+SUM(Cname)        - Sum the values of a numeric column
+AVG(Cname)        - Calculate the average of a numeric column
+GROUP BY name;    - Group rows that share the same value in a column (usually used with aggregate functions above)
+
+CONSTRAINTS:
+PRIMARY KEY       - Uniquely identifies each row (can't be duplicated or empty)
+FOREIGN KEY (newnameinthetable) REFERENCES tablename(id)  - Links a column to another table's column (usually Primary Key)
