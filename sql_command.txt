@@ -1,0 +1,27 @@
+SELECT (columnsname) from (tablename)
+SELECT *(all columns) from (tablename)
+INSERT INTO tablename(column name) values ()
+UPDATE tablename set columnname = ".." where (condition)
+DELETE from tablename where (condition)
+CREATE TABLE tablename (columns ,...........)
+USE DATABASE name
+DROP DATABASE databasename
+DROP TABLE tablename
+ALTER TABLE employees
+MODIFY COLUMN Cname datatype ;
+SELECT * FROM tablename
+WHERE Cname LIKE 'A%';  , WHERE Cname BETWEEN (range);  
+ORDER BY Cname ASC/DESC;
+Aggregate Data:
+     COUNT(*)
+
+
+
+     SUM(Cname)
+     AVG(Cname)
+     GROUP BY name;
+
+Constraints :
+     PRIMARY KEY
+     FOREIGN KEY (newnameinthetable) REFERENCES tablename(id)
+     
