@@ -1,0 +1,67 @@
+1. Frontend
+      │  sends request
+      ▼
+2. Backend
+      │  sends query
+      ▼
+3. Database
+      │  sends back result
+      ▲
+2. Backend
+      │  sends response
+      ▲
+1. Frontend
+____________________________________________________________________________________
+connection between frontend and backend :
+1. Frontend knows the backend's address
+      (a URL)
+      │
+      ▼
+2. DNS lookup
+      (translates domain name → IP address )
+      │
+      ▼
+3. TCP connection
+      (frontend and backend open a socket — the "handshake")
+      │
+      ▼
+4. TLS handshake (if HTTP(S)
+      (encrypts the connection)
+      │
+      ▼
+5. Connection is now open
+      │
+      ▼
+6. Request is sent
+      (GET/POST.... travels over that open connection)
+_____________________________________________________________________________________
+connection between backend and database :
+1. Backend has database credentials
+      (host, port, username, password, database name)
+      │
+      ▼
+2. DNS/network lookup
+      (finds the database server's address)
+      │
+      ▼
+3. TCP connection
+      (backend opens a socket to the database port)
+      │
+      ▼
+4. Authentication
+      (backend sends credentials, database verifies them)
+      │
+      ▼
+5. Connection established
+      │
+      ▼
+6. Query is sent
+      (SQL or NoSQL command travels over that connection)
+
+
+   When a query reaches the database, five things happen in order:
+      Check — the database checks if the query is written correctly.
+      Plan — it figures out the fastest way to run it.
+      Run — it actually reads or writes the data.
+      Lock — it briefly locks that data so nothing else changes it at the same time.
+      Reply — it sends the result back to the backend, which then passes it to the frontend.
